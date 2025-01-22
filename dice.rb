@@ -13,10 +13,10 @@ BetterErrors::Middleware.allow_ip!('0.0.0.0/0.0.0.0')
 get("/") do
   "<h1>Dice Roll</h1>
   <ul>
-    <li><a href='https://musical-capybara-4jqpgrjp65vwh5rjg-4567.app.github.dev/dice/2/6' target='_blank'>Roll two six-sided dice</a></li>
-    <li><a href='https://musical-capybara-4jqpgrjp65vwh5rjg-4567.app.github.dev/dice/2/10' target='_blank'>Roll two ten-sided dice</a></li>
-    <li><a href='https://musical-capybara-4jqpgrjp65vwh5rjg-4567.app.github.dev/dice/1/20' target='_blank'>Roll one twenty-sided die</a></li>
-    <li><a href='https://musical-capybara-4jqpgrjp65vwh5rjg-4567.app.github.dev/dice/5/4' target='_blank'>Roll five four-sided die</a></li>
+    <li><a href=\'/dice/2/6\'>Roll two six-sided dice</a></li>
+    <li><a href=\'/dice/2/10\'>Roll two ten-sided dice</a></li>
+    <li><a href=\'/dice/1/20\'>Roll one twenty-sided die</a></li>
+    <li><a href=\'/dice/5/4\'>Roll five four-sided die</a></li>
   </ul>"
 end
 
