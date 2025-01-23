@@ -32,7 +32,7 @@ get("/dice/2/6") do
 	
   @outcome = "You rolled a #{first_die} and a #{second_die} for a total of #{sum}."
 	
-  erb(:two_six, { :layout => :wrapper })
+  erb(:two_six)
 end
 
 # Simulate two ten-sided dice
@@ -43,16 +43,16 @@ get("/dice/2/10") do
 	
   @outcome = "You rolled a #{first_die} and a #{second_die} for a total of #{sum}."
 	
-  erb(:two_ten, { :layout => :wrapper })
+  erb(:two_ten)
 end
 
 # Simulate one twenty-sided die
 get("/dice/1/20") do
-  dice = rand(1..20)
+  @die = rand(1..20)
 
-  @outcome = "You rolled a #{dice}."
+  @outcome = "You rolled a #{@die}."
 	
-  erb(:one_twenty, { :layout => :wrapper })
+  erb(:one_twenty)
 end
 
 # Simulate five four-sided dice
@@ -66,5 +66,18 @@ get("/dice/5/4") do
 	
   @outcome = "You rolled a #{first_die}, #{second_die}, #{third_die}, #{fourth_die}, and a #{fifth_die} for a total of #{sum}."
 	
-  erb(:five_four, { :layout => :wrapper })
+  erb(:five_four)
+end
+
+# Simulate one hundred six-sided dice
+get("/dice/100/6") do
+  @rolls = []    # Create a blank array
+
+  100.times do    # 100 times...
+    die = rand(1..6)    # Generate a random number
+
+    @rolls.push(die)    # Add the random number to the array 
+  end
+
+  erb(:one_hundred_six)
 end
